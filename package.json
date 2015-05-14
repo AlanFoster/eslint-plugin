@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/AlanFoster/eslint-plugin/issues"
   },
-  "homepage": "https://github.com/AlanFoster/eslint-plugin"
+  "homepage": "https://github.com/AlanFoster/eslint-plugin",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "eslint": "^0.21.0",
+    "eslint-tester": "^0.6.0",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-mocha": "^2.0.1"
+  }
 }

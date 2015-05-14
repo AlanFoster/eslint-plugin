@@ -1,7 +1,7 @@
+var noUseStrict = require('./no-use-strict.js');
+
 module.exports = {
   rules: {
-    "bracket-boolean-expression-assignments": function() {
-      // TODO
-    }
+    "no-use-strict": noUseStrict
   }
 };
