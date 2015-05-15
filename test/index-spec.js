@@ -20,5 +20,11 @@ describe('index', function() {
         assert.ok(this.rules['no-use-strict'])
       })
     });
+
+    describe('bracket-predicates', function() {
+      it('should provide bracket-predicates', function() {
+        assert.ok(this.rules['bracket-predicates'])
+      })
+    });
   })
 });

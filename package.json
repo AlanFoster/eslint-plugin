@@ -23,5 +23,8 @@
     "gulp": "^3.8.11",
     "gulp-load-plugins": "^0.10.0",
     "gulp-mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "lodash": "^3.8.0"
   }
 }
