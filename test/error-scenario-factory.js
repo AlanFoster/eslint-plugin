@@ -3,6 +3,6 @@ module.exports = function(expectedErrorMessage) {
     return {
       code: code,
       errors: [{message: expectedErrorMessage}]
-    }
+    };
   };
 };

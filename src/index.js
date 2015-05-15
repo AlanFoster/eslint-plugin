@@ -3,7 +3,7 @@ var bracketPredicates = require('./bracket-predicates.js');
 
 module.exports = {
   rules: {
-    "no-use-strict": noUseStrict,
-    "bracket-predicates": bracketPredicates
+    'no-use-strict': noUseStrict,
+    'bracket-predicates': bracketPredicates
   }
 };

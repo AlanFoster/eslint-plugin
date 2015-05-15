@@ -1,3 +1,15 @@
 {
-
+  "env": {
+    "amd": true,
+    "jasmine": true
+  },
+  "globals": {
+    "module": false
+  },
+  "rules": {
+    "global-strict": 0,
+    "strict": 0,
+    "quotes": [1, "single"],
+    "curly": [2, "multi-line"]
+  }
 }

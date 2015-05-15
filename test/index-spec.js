@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 
 describe('index', function() {
   it('should be valid', function() {
-    assert.ok(plugin)
+    assert.ok(plugin);
   });
 
   describe('rules', function() {
@@ -12,19 +12,19 @@ describe('index', function() {
     });
 
     it('should provide rules', function() {
-      assert.ok(this.rules)
+      assert.ok(this.rules);
     });
 
     describe('no-use-strict', function() {
       it('should provide no-use-strict', function() {
-        assert.ok(this.rules['no-use-strict'])
-      })
+        assert.ok(this.rules['no-use-strict']);
+      });
     });
 
     describe('bracket-predicates', function() {
       it('should provide bracket-predicates', function() {
-        assert.ok(this.rules['bracket-predicates'])
-      })
+        assert.ok(this.rules['bracket-predicates']);
+      });
     });
-  })
+  });
 });

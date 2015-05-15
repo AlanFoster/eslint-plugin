@@ -1,11 +1,11 @@
 var _ = require('lodash');
 
-var failureMessage = "Place brackets around predicates on assignments";
-var report = function(node, context) {
+var failureMessage = 'Place brackets around predicates on assignments';
+var report = function (node, context) {
   context.report(node, failureMessage);
 };
 
-var bracketed = function(node, context) {
+var bracketed = function (node, context) {
   var before = context.getTokenBefore(node);
   var after = context.getTokenAfter(node);
 
@@ -19,24 +19,24 @@ var isPredicateMissingBrackets = function (node, context) {
   if (!node) return false;
 
   var isPredicateExpression = _.contains(['LogicalExpression', 'BinaryExpression'], node.type);
-  return isPredicateExpression && !bracketed(node, context)
+  return isPredicateExpression && !bracketed(node, context);
 };
 
-var rule = function(context) {
+var rule = function (context) {
   var visitor = {
-    VariableDeclarator: function(node) {
+    VariableDeclarator: function (node) {
       var init = node.init;
 
-      if(isPredicateMissingBrackets(init, context)) {
-        report(init, context)
+      if (isPredicateMissingBrackets(init, context)) {
+        report(init, context);
       }
     },
 
-    AssignmentExpression: function(node) {
+    AssignmentExpression: function (node) {
       var rightHandside = node.right;
 
-      if(isPredicateMissingBrackets(rightHandside, context)) {
-        report(rightHandside, context)
+      if (isPredicateMissingBrackets(rightHandside, context)) {
+        report(rightHandside, context);
       }
     }
   };
