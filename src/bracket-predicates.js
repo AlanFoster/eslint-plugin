@@ -9,8 +9,8 @@ var bracketed = function (node, context) {
   var before = context.getTokenBefore(node);
   var after = context.getTokenAfter(node);
 
-  var hasBracketsBefore = before && before.value === '(';
-  var hasBracketsAfter = after && after.value === ')';
+  var hasBracketsBefore = (before && before.value === '(');
+  var hasBracketsAfter = (after && after.value === ')');
 
   return hasBracketsBefore && hasBracketsAfter;
 };
