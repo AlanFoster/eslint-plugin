@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin",
+  "name": "eslint-plugin-alint",
   "version": "1.0.0",
   "description": "An eslint plugin",
   "main": "src/index.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlanFoster/eslint-plugin.git"
+    "url": "https://github.com/AlanFoster/eslint-plugin-alint.git"
   },
   "author": "Alan Foster",
   "bugs": {
-    "url": "https://github.com/AlanFoster/eslint-plugin/issues"
+    "url": "https://github.com/AlanFoster/eslint-plugin-alint/issues"
   },
-  "homepage": "https://github.com/AlanFoster/eslint-plugin",
+  "homepage": "https://github.com/AlanFoster/eslint-plugin-alint",
   "devDependencies": {
     "chai": "^2.3.0",
     "eslint": "^0.21.0",

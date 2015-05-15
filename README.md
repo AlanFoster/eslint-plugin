@@ -1,4 +1,4 @@
-# eslint-plugin [![Build Status](https://travis-ci.org/AlanFoster/eslint-plugin.svg?branch=master)](https://travis-ci.org/AlanFoster/eslint-plugin)
+# alint [![Build Status](https://travis-ci.org/AlanFoster/eslint-plugin-alint.svg?branch=master)](https://travis-ci.org/AlanFoster/eslint-plugin-alint)
 
 An eslint plugin that implements some additional linting rules.
 
