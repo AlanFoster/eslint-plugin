@@ -12,3 +12,9 @@ gulp.task('test', function() {
 gulp.task('testDev', function() {
   gulp.watch([src, tests], ['test']);
 });
+
+gulp.task('lint', function() {
+  gulp.src([src, tests])
+      .pipe(plugins.eslint({ configFile: 'config/eslint.json' }))
+      .pipe(plugins.eslint.format());
+});
