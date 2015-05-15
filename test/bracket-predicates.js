@@ -2,15 +2,11 @@
 
 var linter = require("eslint").linter,
   ESLintTester = require("eslint-tester"),
-  eslintTester = new ESLintTester(linter);
+  eslintTester = new ESLintTester(linter),
+  errorScenarioFactory = require('./error-scenario-factory');
 
 var expectedErrorMessage = "Place brackets around predicates on assignments";
-var errorScenario = function (code) {
-  return {
-    code: code,
-    errors: [{message: expectedErrorMessage}]
-  }
-};
+var errorScenario = errorScenarioFactory(expectedErrorMessage);
 
 eslintTester.addRuleTest("src/bracket-predicates", {
   valid: [

@@ -11,7 +11,7 @@ var bracketed = function(node, context) {
 
   var hasBracketsBefore = before && before.value === '(';
   var hasBracketsAfter = after && after.value === ')';
-  
+
   return hasBracketsBefore && hasBracketsAfter;
 };
 
