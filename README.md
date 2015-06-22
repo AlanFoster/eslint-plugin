@@ -15,5 +15,5 @@ You may wish to surround brackets within predicate variable assignments, for ins
 ```javascript
 var invalid = user.age > 10; // Will be reported as an error
 
-var valid = (use.age > 10); // Valid - predicate encapsulated within brackets appropriately
+var valid = (user.age > 10); // Valid - predicate encapsulated within brackets appropriately
 ```
