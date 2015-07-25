@@ -1,4 +1,4 @@
-var _ = require('lodash');
+import _ from 'lodash';
 
 var failureMessage = 'Place brackets around predicates on assignments';
 var report = function (node, context) {
@@ -24,7 +24,7 @@ var isPredicateMissingBrackets = function (node, context) {
 
 var rule = function (context) {
   var visitor = {
-    VariableDeclarator: function (node) {
+    VariableDeclarator(node) {
       var init = node.init;
 
       if (isPredicateMissingBrackets(init, context)) {
@@ -32,7 +32,7 @@ var rule = function (context) {
       }
     },
 
-    AssignmentExpression: function (node) {
+    AssignmentExpression(node) {
       var rightHandside = node.right;
 
       if (isPredicateMissingBrackets(rightHandside, context)) {
@@ -40,7 +40,7 @@ var rule = function (context) {
       }
     },
 
-    Property: function (node) {
+    Property(node) {
       var value = node.value;
 
       if (isPredicateMissingBrackets(value, context)) {
