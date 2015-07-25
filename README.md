@@ -35,3 +35,11 @@ npm run test
 ```
 
 To run an individual test you can modify the spec file you are working with and use `describe.only`
+
+#### Building
+
+To build the source code into a releasable asset you can use
+
+```javascript
+npm run build
+```
