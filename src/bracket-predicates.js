@@ -38,6 +38,14 @@ var rule = function (context) {
       if (isPredicateMissingBrackets(rightHandside, context)) {
         report(rightHandside, context);
       }
+    },
+
+    Property: function (node) {
+      var value = node.value;
+
+      if (isPredicateMissingBrackets(value, context)) {
+        report(value, context);
+      }
     }
   };
 

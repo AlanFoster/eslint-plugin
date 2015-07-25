@@ -29,7 +29,10 @@ eslintTester.addRuleTest('src/bracket-predicates', {
     'var x = (true && false), y = (false || false);',
     'var x;\nx = (true && false);',
     'var x = (5 > 3);',
-    'x = (age > 17);'
+    'x = (age > 17);',
+    'var x = { foo: true };',
+    'var x = { foo: !bar };',
+    'var x = { foo: (true || false) };'
   ],
 
   invalid: [
@@ -44,6 +47,8 @@ eslintTester.addRuleTest('src/bracket-predicates', {
     errorScenario('var x = (true && false), y = false || false'),
     errorScenario('var x;\nx = true && false;'),
     errorScenario('var x = 5 > 3;'),
-    errorScenario('x = age > 17;')
+    errorScenario('x = age > 17;'),
+    errorScenario('var x = { foo: true || false };'),
+    errorScenario('var x = { foo: i + 1 };')
   ]
 });
