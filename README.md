@@ -6,14 +6,32 @@ An eslint plugin that implements some additional linting rules.
 
 #### no-use-strict
 
-If you are using a transpiler such as [babeljs](https://babeljs.io/) there is no need for `'use strict'` at the top of your program files, or inside functions. This rule warns you if this additional string meta-data is present.
+If you are using a transpiler such as [babeljs](https://babeljs.io/) there is no need for `'use strict'` at the top of your program files, or inside functions.
+This rule warns you if this additional string meta-data is present.
 
 #### bracket-predicates
 
 You may wish to surround brackets within predicate variable assignments, for instance -
 
 ```javascript
-var invalid = user.age > 10; // Will be reported as an error
-
-var valid = (user.age > 10); // Valid - predicate encapsulated within brackets appropriately
+// Will be reported as an error
+var invalid = user.age > 10;
+var invalid = {
+  key: i + 1;
+}
 ```
+
+```javascript
+// Valid - predicate encapsulated within brackets appropriately
+var valid = (user.age > 10);
+```
+
+### Contributing
+
+To run the test suite you can use the following command -
+
+```
+npm run test
+```
+
+To run an individual test you can modify the spec file you are working with and use `describe.only`
