@@ -1,10 +1,10 @@
 'use strict';
 
-var linter = require('eslint').linter,
-  ESLintTester = require('eslint-tester'),
-  eslintTester = new ESLintTester(linter),
-  errorScenarioFactory = require('./error-scenario-factory');
+import { linter } from 'eslint';
+import ESLintTester from 'eslint-tester';
+import errorScenarioFactory from './error-scenario-factory';
 
+var eslintTester = new ESLintTester(linter);
 var expectedErrorMessage = 'Place brackets around predicates on assignments';
 var errorScenario = errorScenarioFactory(expectedErrorMessage);
 

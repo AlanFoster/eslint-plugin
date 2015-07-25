@@ -1,4 +1,4 @@
-module.exports = function(expectedErrorMessage) {
+export default function(expectedErrorMessage) {
   return function (code) {
     return {
       code: code,

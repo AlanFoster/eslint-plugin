@@ -1,5 +1,5 @@
-var plugin = require('./../src/index.js');
-var assert = require('chai').assert;
+import plugin from './../src/index.js';
+import { assert } from 'chai';
 
 describe('index', function() {
   it('should be valid', function() {

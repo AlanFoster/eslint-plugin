@@ -1,3 +1,5 @@
+require('babel-core/register');
+
 var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
