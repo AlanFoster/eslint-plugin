@@ -1,7 +1,7 @@
-var noUseStrict = require('./no-use-strict.js');
-var bracketPredicates = require('./bracket-predicates.js');
+import noUseStrict from './no-use-strict.js';
+import bracketPredicates from './bracket-predicates.js';
 
-module.exports = {
+export default {
   rules: {
     'no-use-strict': noUseStrict,
     'bracket-predicates': bracketPredicates

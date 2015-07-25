@@ -15,12 +15,13 @@ var inspectBody = function (node, context) {
 
 var rule = function(context) {
   var visitor = {
-    Program: function (node) {
+    Program(node) {
       if (node.body.length === 0) return;
 
       inspectBody(node, context);
     },
-    FunctionExpression: function (node) {
+
+    FunctionExpression(node) {
       var expression = node.body;
       if (!expression) return;
 

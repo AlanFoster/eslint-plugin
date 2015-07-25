@@ -1,5 +1,3 @@
-'use strict';
-
 import { linter } from 'eslint';
 import ESLintTester from 'eslint-tester';
 import errorScenarioFactory from './error-scenario-factory';
