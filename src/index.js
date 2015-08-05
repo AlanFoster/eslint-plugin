@@ -10,4 +10,4 @@ export default {
     'no-use-strict': 1,
     'bracket-predicates': 1
   }
-};
+}
