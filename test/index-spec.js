@@ -1,4 +1,4 @@
-import plugin from './../src/index.js';
+import plugin from './../dist/index.js';
 import { assert } from 'chai';
 
 describe('index', function() {

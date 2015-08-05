@@ -2,12 +2,11 @@ require('babel-core/register');
 
 var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
-var webpackConfig = require('./config/webpack.js');
 
 var src = 'src/**/*.js';
 var tests = 'test/**/*.js';
 
-gulp.task('test', function() {
+gulp.task('test', ['build'], function() {
   return gulp.src(tests, { read: false })
               .pipe(plugins.mocha({report: 'spec'}))
 });
@@ -24,6 +23,6 @@ gulp.task('lint', function() {
 
 gulp.task('build', [], function() {
   return gulp.src(src)
-             .pipe(plugins.webpack(webpackConfig))
+             .pipe(plugins.babel())
              .pipe(gulp.dest('dist'));
 });
