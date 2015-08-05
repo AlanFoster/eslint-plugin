@@ -7,7 +7,7 @@ var expectedErrorMessage = 'The statement "use strict" is not required within a 
 var errorScenario = errorScenarioFactory(expectedErrorMessage);
 
 describe('no use strict', function() {
-  eslintTester.addRuleTest('src/no-use-strict', {
+  eslintTester.addRuleTest('dist/no-use-strict', {
     valid: [
       '',
       '           ',

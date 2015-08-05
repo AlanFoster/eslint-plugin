@@ -7,7 +7,7 @@ var expectedErrorMessage = 'Place brackets around predicates on assignments';
 var errorScenario = errorScenarioFactory(expectedErrorMessage);
 
 describe('bracket predicates', function() {
-  eslintTester.addRuleTest('src/bracket-predicates', {
+  eslintTester.addRuleTest('dist/bracket-predicates', {
     valid: [
       'var x;',
       'var x = undefined;',
