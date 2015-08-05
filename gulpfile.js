@@ -1,12 +1,18 @@
 require('babel-core/register');
 
-var gulp   = require('gulp');
+var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 var src = 'src/**/*.js';
 var tests = 'test/**/*.js';
 
-gulp.task('test', ['build'], function() {
+var lint = function() {
+  return gulp.src([src, tests])
+             .pipe(plugins.eslint({ configFile: 'config/eslint.json' }))
+             .pipe(plugins.eslint.format())
+};
+
+gulp.task('test', ['lint-with-failure', 'build'], function() {
   return gulp.src(tests, { read: false })
               .pipe(plugins.mocha({report: 'spec'}))
 });
@@ -16,9 +22,11 @@ gulp.task('testDev', function() {
 });
 
 gulp.task('lint', function() {
-  gulp.src([src, tests])
-      .pipe(plugins.eslint({ configFile: 'config/eslint.json' }))
-      .pipe(plugins.eslint.format());
+  return lint();
+});
+
+gulp.task('lint-with-failure', function() {
+  return lint().pipe(plugins.eslint.failOnError());
 });
 
 gulp.task('build', [], function() {

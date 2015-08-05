@@ -5,4 +5,4 @@ export default function(expectedErrorMessage) {
       errors: [{message: expectedErrorMessage}]
     };
   };
-};
+}

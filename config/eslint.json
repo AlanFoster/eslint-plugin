@@ -1,9 +1,9 @@
 {
+  "parser": "babel-eslint",
   "plugins": [
     "alint"
   ],
   "env": {
-    "amd": true,
     "jasmine": true
   },
   "globals": {
