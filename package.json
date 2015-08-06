@@ -9,6 +9,10 @@
     "build": "gulp build",
     "lint": "gulp lint"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/AlanFoster/eslint-plugin-alint.git"
