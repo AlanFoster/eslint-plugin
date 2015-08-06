@@ -17,7 +17,7 @@ You may wish to surround brackets within predicate variable assignments, for ins
 // Will be reported as an error
 var invalid = user.age > 10;
 var invalid = {
-  key: i + 1;
+  key: i + 1
 }
 ```
 
@@ -25,6 +25,23 @@ var invalid = {
 // Valid - predicate encapsulated within brackets appropriately
 var valid = (user.age > 10);
 ```
+
+#### Release-Log
+
+## 1.1.2
+
+- Only publish `dist` and `README.md` as part of `npm publish`
+
+## 1.1.1
+- Remove webpack as build tool, replacing with raw Babel
+- `dist` folder now contains separate files as a result
+
+## 1.1.0
+- Update `bracket-predicates` to also lint Object values
+- Use webpack as a build tool, providing a single `dist/index.js` file as the entry point
+
+## 1.0.0
+Initial release. no-use-strict and bracket-predicates added
 
 ### Contributing
 
