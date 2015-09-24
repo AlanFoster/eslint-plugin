@@ -31,7 +31,14 @@ describe('bracket predicates', function() {
       'x = (age > 17);',
       'var x = { foo: true };',
       'var x = { foo: !bar };',
-      'var x = { foo: (true || false) };'
+      'var x = { foo: (true || false) };',
+      'var predicate = function(x) { return (x === 1); };',
+      'var predicate = function(x) { return x; };',
+      'var predicate = function(x) { };',
+      'var predicate = function(x) { return undefined; };',
+      'var predicate = function(x) { return (x === 1) };',
+      'var predicate = function(x) { return true; return (x === 1) };',
+      'var contains = function(string, substring) { return (string.indexOf(substring) > -1); };'
     ],
 
     invalid: [
@@ -48,7 +55,10 @@ describe('bracket predicates', function() {
       errorScenario('var x = 5 > 3;'),
       errorScenario('x = age > 17;'),
       errorScenario('var x = { foo: true || false };'),
-      errorScenario('var x = { foo: i + 1 };')
+      errorScenario('var x = { foo: i + 1 };'),
+      errorScenario('var predicate = function(x) { return x === 1; };'),
+      errorScenario('var predicate = function(x) { return true; return x === 1 };'),
+      errorScenario('var contains = function(string, substring) { return string.indexOf(substring) > -1; };')
     ]
   });
 });

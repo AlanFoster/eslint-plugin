@@ -52,6 +52,14 @@ var rule = function rule(context) {
       if (isPredicateMissingBrackets(value, context)) {
         report(value, context);
       }
+    },
+
+    ReturnStatement: function ReturnStatement(node) {
+      var returnResult = node.argument;
+
+      if (isPredicateMissingBrackets(returnResult, context)) {
+        report(returnResult, context);
+      }
     }
   };
 
