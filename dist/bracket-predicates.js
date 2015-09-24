@@ -28,38 +28,36 @@ var isPredicateMissingBrackets = function isPredicateMissingBrackets(node, conte
   return isPredicateExpression && !bracketed(node, context);
 };
 
+var reportIfMissingBrackets = function reportIfMissingBrackets(node, context) {
+  if (!isPredicateMissingBrackets(node, context)) return;
+
+  report(node, context);
+};
+
 var rule = function rule(context) {
   var visitor = {
     VariableDeclarator: function VariableDeclarator(node) {
       var init = node.init;
 
-      if (isPredicateMissingBrackets(init, context)) {
-        report(init, context);
-      }
+      reportIfMissingBrackets(init, context);
     },
 
     AssignmentExpression: function AssignmentExpression(node) {
       var rightHandside = node.right;
 
-      if (isPredicateMissingBrackets(rightHandside, context)) {
-        report(rightHandside, context);
-      }
+      reportIfMissingBrackets(rightHandside, context);
     },
 
     Property: function Property(node) {
       var value = node.value;
 
-      if (isPredicateMissingBrackets(value, context)) {
-        report(value, context);
-      }
+      reportIfMissingBrackets(value, context);
     },
 
     ReturnStatement: function ReturnStatement(node) {
       var returnResult = node.argument;
 
-      if (isPredicateMissingBrackets(returnResult, context)) {
-        report(returnResult, context);
-      }
+      reportIfMissingBrackets(returnResult, context);
     }
   };
 
