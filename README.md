@@ -11,7 +11,7 @@ This rule warns you if this additional string meta-data is present.
 
 #### bracket-predicates
 
-You may wish to surround brackets within predicate variable assignments, for instance -
+You may wish to surround brackets within predicate variable assignments, function calls etc for instance -
 
 ```javascript
 // Will be reported as an error
@@ -24,6 +24,18 @@ var invalid = {
 ```javascript
 // Valid - predicate encapsulated within brackets appropriately
 var valid = (user.age > 10);
+```
+
+```javascript
+// Invalid - missing brackets
+var contains = function(string, substring) {
+  return string.indexOf(substring) > -1;
+};
+
+// Valid - return expression encapsulated within brackets appropriately
+var contains = function(string, substring) {
+  return (string.indexOf(substring) > -1);
+};
 ```
 
 #### Release-Log
