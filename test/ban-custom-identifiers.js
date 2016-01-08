@@ -8,6 +8,7 @@ var expectedErrorMessage = 'Place brackets around predicates on assignments';
 describe('bracket predicates', function() {
   eslintTester.addRuleTest('dist/ban-custom-identifiers', {
     valid: [
+      { code: 'var valid = 10;' },
       { code: 'var valid = 10;', options: [ ] },
       { code: 'var eventCallback = function (e) { };', options: [ 'foo' ] },
       { code: 'var eventCallback = function (e) { };', options: [ 'foo', 'evt', 'event' ] }
