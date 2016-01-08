@@ -11,12 +11,12 @@ var lint = function() {
              .pipe(plugins.eslint.format())
 };
 
-gulp.task('test', ['lint-with-failure', 'build'], function() {
+gulp.task('test', ['build'], function() {
   return gulp.src(tests, { read: false })
              .pipe(plugins.mocha({report: 'spec' }))
 });
 
-gulp.task('testDev', function() {
+gulp.task('test-dev', function() {
   gulp.watch([src, tests], ['test']);
 });
 

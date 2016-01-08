@@ -6,6 +6,7 @@
   "private": false,
   "scripts": {
     "test": "gulp test",
+    "test-dev": "gulp test-dev",
     "build": "gulp build",
     "lint": "gulp lint"
   },
