@@ -4,6 +4,30 @@ An eslint plugin that implements some additional linting rules.
 
 ### Rules
 
+### ban-custom-identifiers
+
+Sometimes you may wish to ban specific identifiers from being used within your codebase.
+This option allows you to configure which identifiers are banned.
+
+To enable this rule within eslint -
+
+```json
+"rules": {
+    "alint/no-use-strict": [2, "evt"],
+}
+```
+
+An example of this error message is 
+
+```javascript
+// This will be reported as `Banned identifier: 'event' found`
+eventEmitter.on(function (evt) {
+   // ...
+});
+```
+
+
+
 #### no-use-strict
 
 If you are using a transpiler such as [babeljs](https://babeljs.io/) there is no need for `'use strict'` at the top of your program files, or inside functions.
