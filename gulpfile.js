@@ -1,8 +1,7 @@
-require('babel-core/register');
-
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
+require('babel-core/register')
 var src = 'src/**/*.js';
 var tests = 'test/**/*.js';
 
@@ -14,7 +13,7 @@ var lint = function() {
 
 gulp.task('test', ['lint-with-failure', 'build'], function() {
   return gulp.src(tests, { read: false })
-              .pipe(plugins.mocha({report: 'spec'}))
+             .pipe(plugins.mocha({report: 'spec' }))
 });
 
 gulp.task('testDev', function() {
