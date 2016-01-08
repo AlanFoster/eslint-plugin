@@ -26,5 +26,11 @@ describe('index', function() {
         assert.ok(this.rules['bracket-predicates']);
       });
     });
+
+    describe('ban-custom-identifiers', function() {
+      it('should provide ban-custom-identifiers', function() {
+        assert.ok(this.rules['ban-custom-identifiers']);
+      });
+    });
   });
 });
