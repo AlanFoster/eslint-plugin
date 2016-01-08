@@ -1,10 +1,10 @@
 'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
 var _lodash = require('lodash');
 
 var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var failureMessage = 'Place brackets around predicates on assignments';
 var report = function report(node, context) {
@@ -24,7 +24,7 @@ var bracketed = function bracketed(node, context) {
 var isPredicateMissingBrackets = function isPredicateMissingBrackets(node, context) {
   if (!node) return false;
 
-  var isPredicateExpression = _lodash2['default'].contains(['LogicalExpression', 'BinaryExpression'], node.type);
+  var isPredicateExpression = _lodash2.default.contains(['LogicalExpression', 'BinaryExpression'], node.type);
   return isPredicateExpression && !bracketed(node, context);
 };
 
@@ -41,19 +41,16 @@ var rule = function rule(context) {
 
       reportIfMissingBrackets(init, context);
     },
-
     AssignmentExpression: function AssignmentExpression(node) {
       var rightHandside = node.right;
 
       reportIfMissingBrackets(rightHandside, context);
     },
-
     Property: function Property(node) {
       var value = node.value;
 
       reportIfMissingBrackets(value, context);
     },
-
     ReturnStatement: function ReturnStatement(node) {
       var returnResult = node.argument;
 

@@ -22,7 +22,6 @@ var rule = function rule(context) {
 
       inspectBody(node, context);
     },
-
     FunctionExpression: function FunctionExpression(node) {
       var expression = node.body;
       if (!expression) return;

@@ -1,27 +1,26 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+var _noUseStrict = require('./no-use-strict.js');
 
-var _noUseStrictJs = require('./no-use-strict.js');
+var _noUseStrict2 = _interopRequireDefault(_noUseStrict);
 
-var _noUseStrictJs2 = _interopRequireDefault(_noUseStrictJs);
+var _bracketPredicates = require('./bracket-predicates.js');
 
-var _bracketPredicatesJs = require('./bracket-predicates.js');
+var _bracketPredicates2 = _interopRequireDefault(_bracketPredicates);
 
-var _bracketPredicatesJs2 = _interopRequireDefault(_bracketPredicatesJs);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports['default'] = {
+exports.default = {
   rules: {
-    'no-use-strict': _noUseStrictJs2['default'],
-    'bracket-predicates': _bracketPredicatesJs2['default']
+    'no-use-strict': _noUseStrict2.default,
+    'bracket-predicates': _bracketPredicates2.default
   },
   rulesConfig: {
     'no-use-strict': 1,
     'bracket-predicates': 1
   }
 };
-module.exports = exports['default'];
