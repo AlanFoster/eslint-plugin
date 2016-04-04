@@ -25,8 +25,25 @@ eventEmitter.on(function (evt) {
    // ...
 });
 ```
+An example of this error message is
 
+```javascript
+// This will be reported as `Banned identifier: 'event' found`
+eventEmitter.on(function (evt) {
+   // ...
+});
+```
+### name React files with JSX
 
+Use this rule if you wish to ensure that any JavaScript file that contains JSX ends with the `.jsx` file extension.
+
+To enable this rule within eslint -
+
+```json
+"rules": {
+    "alint/require-jsx-extension": [2],
+}
+```
 
 #### no-use-strict
 
