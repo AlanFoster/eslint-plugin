@@ -13,7 +13,7 @@ To enable this rule within eslint -
 
 ```json
 "rules": {
-    "alint/no-use-strict": [2, "evt"],
+    "alint/no-use-strict": [2, "evt"]
 }
 ```
 
@@ -26,7 +26,18 @@ eventEmitter.on(function (evt) {
 });
 ```
 
+```
+### name React files with JSX
 
+Use this rule if you wish to ensure that any JavaScript file that contains a JSX element, the file name ends with the `.jsx` file extension.
+
+To enable this rule within eslint -
+
+```json
+"rules": {
+    "alint/require-jsx-extension": [2]
+}
+```
 
 #### no-use-strict
 

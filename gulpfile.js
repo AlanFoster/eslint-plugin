@@ -13,7 +13,7 @@ var lint = function() {
 
 gulp.task('test', ['build'], function() {
   return gulp.src(tests, { read: false })
-             .pipe(plugins.mocha({report: 'spec' }))
+             .pipe(plugins.mocha({ report: 'spec' }))
 });
 
 gulp.task('test-dev', function() {
