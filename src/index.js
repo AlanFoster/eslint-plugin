@@ -16,4 +16,4 @@ export default {
     'ban-custom-identifiers': 1,
     'require-jsx-extension': 1
   }
-};
+}
